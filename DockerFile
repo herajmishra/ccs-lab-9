@@ -1,0 +1,14 @@
+# Use OpenJDK base image for building the Spring Boot app
+FROM openjdk:17-jdk-slim as build
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the generated JAR file from the target folder into the container
+COPY target/ccs-lab-9-1.0.jar /app/ccs-lab-9-1.0.jar
+
+# Specify the command to run the app inside the container
+ENTRYPOINT ["java", "-jar", "/app/ccs-lab-9-1.0.jar"]
+
+# Expose the port on which the Spring Boot app will run (default: 8080)
+EXPOSE 8090

@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Welcome to CCS-Lab9 Dashboard</h1>
+
+<p th:text="'Welcome, ' + ${firstname} + ' ' + ${lastname} + '!'"></p>
+
+<a href="/logout">Logout</a>
+</body>
+</html>
